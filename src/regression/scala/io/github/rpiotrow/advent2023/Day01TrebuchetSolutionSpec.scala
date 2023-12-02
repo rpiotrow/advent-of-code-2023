@@ -4,7 +4,7 @@ import io.github.rpiotrow.advent2023.day01.Trebuchet
 import zio.test.*
 import zio.test.Assertion.*
 
-object Day01TreBuchetSolutionSpec extends ZIOSpecDefault:
+object Day01TrebuchetSolutionSpec extends ZIOSpecDefault:
 
   def spec = suite("TrebuchetSolutionSpec")(
     test("Trebuchet solution") {
