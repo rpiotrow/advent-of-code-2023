@@ -1,5 +1,6 @@
 package io.github.rpiotrow.advent2023
 
+import io.github.rpiotrow.advent2023.day01.Trebuchet
 import zio.*
 import zio.cli.ZIOCliDefault
 
@@ -7,7 +8,9 @@ type SolutionError = String | java.io.IOException
 type SolutionResult = Long | String
 type Solution = ZIO[Any, SolutionError, (SolutionResult, SolutionResult)]
 
-private val days: Map[Int, Solution] = Map()
+private val days: Map[Int, Solution] = Map(
+  1 -> Trebuchet.solution
+)
 
 object Main extends ZIOCliDefault:
 
