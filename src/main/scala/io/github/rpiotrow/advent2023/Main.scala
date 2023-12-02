@@ -1,6 +1,7 @@
 package io.github.rpiotrow.advent2023
 
 import io.github.rpiotrow.advent2023.day01.Trebuchet
+import io.github.rpiotrow.advent2023.day02.CubeConundrum
 import zio.*
 import zio.cli.ZIOCliDefault
 
@@ -9,7 +10,8 @@ type SolutionResult = Long | String
 type Solution = ZIO[Any, SolutionError, (SolutionResult, SolutionResult)]
 
 private val days: Map[Int, Solution] = Map(
-  1 -> Trebuchet.solution
+  1 -> Trebuchet.solution,
+  2 -> CubeConundrum.solution
 )
 
 object Main extends ZIOCliDefault:
