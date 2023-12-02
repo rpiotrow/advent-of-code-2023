@@ -27,8 +27,8 @@ object CubeConundrum:
               .fork
             sum1 <- part1.join
             sum2 <- part2.join
-            _ <- printLine(s"The sum of IDs of possible games is $sum1")
-            _ <- printLine(s"The sum of the power of cube sets with fewest number of cubes of each color is $sum2")
+            _    <- printLine(s"The sum of IDs of possible games is $sum1")
+            _    <- printLine(s"The sum of the power of cube sets with fewest number of cubes of each color is $sum2")
           yield (sum1, sum2)
         case _ => ZIO.dieMessage("impossible")
       }

@@ -9,7 +9,7 @@ object Game:
     line match
       case s"Game $idString: $cubeSets" =>
         for
-          id <- parseInt(idString, _ => s"Cannot parse id $idString")
+          id       <- parseInt(idString, _ => s"Cannot parse id $idString")
           cubeSets <- ZIO.foreach(cubeSets.split(';'))(s => CubeSet.fromString(s.trim))
         yield Game(id, cubeSets)
       case _ => ZIO.dieMessage(s"Invalid input line $line")

@@ -22,7 +22,7 @@ object Trebuchet:
         case _ => ZIO.dieMessage("Invalid input!")
       }
       .runFold((0, 0)) { (sums, values) =>
-        val (sum1, sum2) = sums
+        val (sum1, sum2)     = sums
         val (value1, value2) = values
         (sum1 + value1, sum2 + value2)
       }

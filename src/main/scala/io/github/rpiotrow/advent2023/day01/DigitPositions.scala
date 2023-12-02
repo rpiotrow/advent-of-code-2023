@@ -30,17 +30,18 @@ object DigitPositions:
     9 -> List("9".r, "nine".r)
   )
 
+  def fromLineWithDigits(line: String): Seq[DigitPositions]         = fromLine(line, numberPatterns)
+
   private def fromLine(line: String, patterns: Seq[(Int, List[Regex])]): Seq[DigitPositions] =
     patterns.map { case (digit, patterns) =>
       DigitPositions(digit, patterns.flatMap(_.findAllMatchIn(line).map(_.start)))
     }
 
-  def fromLineWithDigits(line: String): Seq[DigitPositions] = fromLine(line, numberPatterns)
   def fromLineWithDigitsAndNames(line: String): Seq[DigitPositions] = fromLine(line, numberAndNamePatterns)
 
   extension (seq: Seq[DigitPositions])
     def firstDigit: Option[Int] = getDigit(Ordering[Int])
-    def lastDigit: Option[Int] = getDigit(Ordering[Int].reverse)
+    def lastDigit: Option[Int]  = getDigit(Ordering[Int].reverse)
     private def getDigit(ordering: Ordering[Int]) =
       seq
         .flatMap { ds => ds.positions.map(position => (ds.digit -> position)) }

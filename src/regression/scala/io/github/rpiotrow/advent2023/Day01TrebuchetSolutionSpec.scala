@@ -6,9 +6,7 @@ import zio.test.Assertion.*
 
 object Day01TrebuchetSolutionSpec extends ZIOSpecDefault:
 
-  def spec = suite("TrebuchetSolutionSpec")(
-    test("Trebuchet solution") {
-      for solution <- Trebuchet.solution
-      yield assert(solution)(equalTo((55123L, 55260L)))
-    }
-  )
+  def spec = suite("TrebuchetSolutionSpec")(test("Trebuchet solution") {
+    for solution <- Trebuchet.solution
+    yield assert(solution)(equalTo((55123L, 55260L)))
+  })
