@@ -6,7 +6,7 @@ import zio.test.Assertion.*
 
 object Day02CubeConundrumSolutionSpec extends ZIOSpecDefault:
 
-  def spec = suite("Cube ConundrumSolutionSpec")(test("Cube Conundrum solution") {
+  def spec = suite("CubeConundrumSolutionSpec")(test("Cube Conundrum solution") {
     for solution <- CubeConundrum.solution
     yield assert(solution)(equalTo((2776L, 68638L)))
   })
