@@ -3,6 +3,7 @@ package io.github.rpiotrow.advent2023
 import io.github.rpiotrow.advent2023.day01.Trebuchet
 import io.github.rpiotrow.advent2023.day02.CubeConundrum
 import io.github.rpiotrow.advent2023.day03.GearRatios
+import io.github.rpiotrow.advent2023.day04.Scratchcards
 import zio.*
 import zio.cli.ZIOCliDefault
 
@@ -10,7 +11,8 @@ type SolutionError  = String | java.io.IOException
 type SolutionResult = Long | String
 type Solution       = ZIO[Any, SolutionError, (SolutionResult, SolutionResult)]
 
-private val days: Map[Int, Solution] = Map(1 -> Trebuchet.solution, 2 -> CubeConundrum.solution, 3 -> GearRatios.solution)
+private val days: Map[Int, Solution] =
+  Map(1 -> Trebuchet.solution, 2 -> CubeConundrum.solution, 3 -> GearRatios.solution, 4 -> Scratchcards.solution)
 
 object Main extends ZIOCliDefault:
 
