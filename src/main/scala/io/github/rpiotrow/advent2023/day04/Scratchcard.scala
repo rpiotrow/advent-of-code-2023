@@ -3,11 +3,11 @@ package io.github.rpiotrow.advent2023.day04
 import io.github.rpiotrow.advent2023.Input.parseInt
 import zio.{IO, ZIO}
 
-case class Scratchcard(id: Int, winningNumbers: Seq[Int], ownedNumbers: Seq[Int]):
+class Scratchcard(val id: Int, winningNumbers: Seq[Int], ownedNumbers: Seq[Int]):
+  def winAmount: Int = ownedNumbers.count(winningNumbers.contains)
   def score: Long =
-    val exponent = ownedNumbers.count(winningNumbers.contains)
+    val exponent = winAmount
     if exponent == 0 then 0 else Math.pow(2, exponent-1).toLong
-
 
 object Scratchcard:
   def fromLine(line: String): IO[String, Scratchcard] =

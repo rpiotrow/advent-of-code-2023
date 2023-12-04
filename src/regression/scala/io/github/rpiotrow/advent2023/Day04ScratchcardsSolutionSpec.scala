@@ -8,6 +8,6 @@ object Day04ScratchcardsSolutionSpec extends ZIOSpecDefault:
 
   def spec = suite("ScratchcardsSolutionSpec")(test("Scratchcards solution") {
     for solution <- Scratchcards.solution
-      yield assert(solution)(equalTo((23847L, 0L)))
+      yield assert(solution)(equalTo((23847L, 8570000L)))
   })
 
