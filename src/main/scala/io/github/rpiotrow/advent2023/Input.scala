@@ -22,3 +22,6 @@ object Input:
 
   def parseInt(s: String, errorMessage: Throwable => String): IO[String, Int] =
     ZIO.attempt(s.toInt).mapError(errorMessage)
+
+  def parseLong(s: String, errorMessage: Throwable => String): IO[String, Long] =
+    ZIO.attempt(s.toLong).mapError(errorMessage)
