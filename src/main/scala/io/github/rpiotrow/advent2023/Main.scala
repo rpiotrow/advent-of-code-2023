@@ -5,6 +5,7 @@ import io.github.rpiotrow.advent2023.day02.CubeConundrum
 import io.github.rpiotrow.advent2023.day03.GearRatios
 import io.github.rpiotrow.advent2023.day04.Scratchcards
 import io.github.rpiotrow.advent2023.day05.IfYouGiveASeedAFertilizer
+import io.github.rpiotrow.advent2023.day08.HauntedWasteland
 import zio.*
 import zio.cli.ZIOCliDefault
 
@@ -18,7 +19,8 @@ private val days: Map[Int, Solution] =
     2 -> CubeConundrum.solution,
     3 -> GearRatios.solution,
     4 -> Scratchcards.solution,
-    5 -> IfYouGiveASeedAFertilizer.solution
+    5 -> IfYouGiveASeedAFertilizer.solution,
+    8 -> HauntedWasteland.solution
   )
 
 object Main extends ZIOCliDefault:
