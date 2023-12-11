@@ -9,6 +9,7 @@ import io.github.rpiotrow.advent2023.day06.WaitForIt
 import io.github.rpiotrow.advent2023.day08.HauntedWasteland
 import io.github.rpiotrow.advent2023.day09.MirageMaintenance
 import io.github.rpiotrow.advent2023.day10.PipeMaze
+import io.github.rpiotrow.advent2023.day11.CosmicExpansion
 import zio.*
 import zio.cli.ZIOCliDefault
 
@@ -26,7 +27,8 @@ private val days: Map[Int, Solution] =
     6 -> WaitForIt.solution,
     8 -> HauntedWasteland.solution,
     9 -> MirageMaintenance.solution,
-    10 -> PipeMaze.solution
+    10 -> PipeMaze.solution,
+    11 -> CosmicExpansion.solution
   )
 
 object Main extends ZIOCliDefault:
