@@ -3,6 +3,7 @@ package io.github.rpiotrow.advent2023.day07
 import zio.{IO, ZIO}
 
 enum Card:
+  case 🃏 extends Card
   case 🂲 extends Card
   case 🂳 extends Card
   case 🂴 extends Card

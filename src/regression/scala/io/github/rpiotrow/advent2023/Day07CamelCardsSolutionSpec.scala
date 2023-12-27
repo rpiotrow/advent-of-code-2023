@@ -8,5 +8,5 @@ object Day07CamelCardsSolutionSpec extends ZIOSpecDefault:
 
   def spec = suite("CamelCardsSolutionSpec")(test("Camel Cards solution") {
     for solution <- CamelCards.solution
-      yield assert(solution)(equalTo((248836197L, 0L)))
+    yield assert(solution)(equalTo((248836197L, 251195607L)))
   })
