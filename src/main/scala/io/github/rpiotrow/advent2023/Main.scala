@@ -6,6 +6,7 @@ import io.github.rpiotrow.advent2023.day03.GearRatios
 import io.github.rpiotrow.advent2023.day04.Scratchcards
 import io.github.rpiotrow.advent2023.day05.IfYouGiveASeedAFertilizer
 import io.github.rpiotrow.advent2023.day06.WaitForIt
+import io.github.rpiotrow.advent2023.day07.CamelCards
 import io.github.rpiotrow.advent2023.day08.HauntedWasteland
 import io.github.rpiotrow.advent2023.day09.MirageMaintenance
 import io.github.rpiotrow.advent2023.day10.PipeMaze
@@ -28,6 +29,7 @@ private val days: Map[Int, Solution] =
     4 -> Scratchcards.solution,
     5 -> IfYouGiveASeedAFertilizer.solution,
     6 -> WaitForIt.solution,
+    7 -> CamelCards.solution,
     8 -> HauntedWasteland.solution,
     9 -> MirageMaintenance.solution,
     10 -> PipeMaze.solution,
