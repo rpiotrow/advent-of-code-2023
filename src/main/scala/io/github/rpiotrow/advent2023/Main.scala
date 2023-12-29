@@ -14,6 +14,7 @@ import io.github.rpiotrow.advent2023.day11.CosmicExpansion
 import io.github.rpiotrow.advent2023.day14.ParabolicReflectorDish
 import io.github.rpiotrow.advent2023.day15.LensLibrary
 import io.github.rpiotrow.advent2023.day16.TheFloorWillBeLava
+import io.github.rpiotrow.advent2023.day19.Aplenty
 import zio.*
 import zio.cli.ZIOCliDefault
 
@@ -36,7 +37,8 @@ private val days: Map[Int, Solution] =
     11 -> CosmicExpansion.solution,
     14 -> ParabolicReflectorDish.solution,
     15 -> LensLibrary.solution,
-    16 -> TheFloorWillBeLava.solution
+    16 -> TheFloorWillBeLava.solution,
+    19 -> Aplenty.solution
   )
 
 object Main extends ZIOCliDefault:
